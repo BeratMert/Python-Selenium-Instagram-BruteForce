@@ -13,6 +13,7 @@ class Instagram:
     def Login(self):
         try:
             self.browser.get(self.url)
+            sleep(1)
 
             self.nameBlock = self.browser.find_element_by_name("username")
             self.passBlock = self.browser.find_element_by_name("password")
