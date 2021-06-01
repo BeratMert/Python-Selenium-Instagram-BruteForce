@@ -43,5 +43,5 @@ class Instagram:
 
 
 if __name__ == "__main__":
-    ins =Instagram(ACCOUNT_NAME, PASSWORDS.TXT_PATH, CHROMEDRİVER.EXE_PATH)
+    ins =Instagram(ACCOUNT_NAME, PASSWORDS.TXT_PATH, CHROMEDRIVER.EXE_PATH)
     ins.Entry()
