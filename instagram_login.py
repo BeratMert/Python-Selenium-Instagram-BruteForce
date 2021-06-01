@@ -10,7 +10,7 @@ class Instagram:
         self.chrome_path = chrome_path
         self.browser = webdriver.Chrome(executable_path=self.chrome_path)
 
-    def Entry(self):
+    def Login(self):
         try:
             self.browser.get(self.url)
 
@@ -44,4 +44,4 @@ class Instagram:
 
 if __name__ == "__main__":
     ins =Instagram(ACCOUNT_NAME, PASSWORDS.TXT_PATH, CHROMEDRIVER.EXE_PATH)
-    ins.Entry()
+    ins.Login()
