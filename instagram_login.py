@@ -41,7 +41,8 @@ class Instagram:
 
 
 if __name__ == "__main__":
-    ins = Instagram(ACCOUNT_NAME, PASSWORDS.TXT_PATH, CHROMEDRIVER.EXE_PATH)
-    # For Example:
-    # ins = Instagram("testname", "E:/[Kodlama]/selenium/passwords.txt", "E:\[Kodlama]\selenium\chromedriver.exe")
+    name = str(input("Profil Name; "))
+    password_path = str(input("'password.txt' Path; ")).replace("\\", "/")
+    driver_path = str(input("'driver_path' Path; ")).replace("\\", "/")
+    ins = Instagram(name, password_path, driver_path)
     ins.Login()
