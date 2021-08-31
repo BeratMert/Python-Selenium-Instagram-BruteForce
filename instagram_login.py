@@ -42,7 +42,7 @@ class Instagram:
 
 if __name__ == "__main__":
     name = str(input("Profil Name; "))
-    password_path = str(input("'password.txt' Path; ")).replace("\\", "/")
+    password_path = str(input("'passwords.txt' Path; ")).replace("\\", "/")
     driver_path = str(input("'driver_path' Path; ")).replace("\\", "/")
     ins = Instagram(name, password_path, driver_path)
     ins.Login()
